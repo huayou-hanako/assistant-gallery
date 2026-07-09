@@ -1,4 +1,394 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>小助手发布页</title>
-<meta http-equiv="refresh" content="0;url=小助手发布页.html">
-</head><body></body></html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小助手 — AI 原生工作台</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <span class="nav-logo">小助手</span>
+    <div class="nav-links">
+      <a href="#workspace">工作台</a>
+      <a href="#board">看板</a>
+      <a href="#ai">AI</a>
+      <a href="#calendar">日历</a>
+      <a href="#desktop">桌面端</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">AI-Native Workspace</p>
+    <h1 class="hero-title"><span class="line">小助手</span></h1>
+    <p class="hero-sub">你的 AI 工作台</p>
+    <p class="hero-desc">说一句话创建任务，打开就看到今天该做什么。<br>看板、日历、语音、搜索、周报——一个应用，完整工作流。</p>
+    <div class="hero-actions">
+      <a href="#workspace" class="btn-pill">探索功能</a>
+      <span class="version-tag">v0.2.1</span>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div></div>
+</section>
+
+<!-- OPENING -->
+<section class="stmt">
+  <div class="narrow">
+    <h2 class="stmt-text">不是又一个待办应用。<br>是<em>理解你工作节奏</em>的智能伙伴。</h2>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="feat" id="workspace">
+  <div class="feat-inner">
+    <div class="feat-label mono-label">Dashboard</div>
+    <h2 class="feat-title">打开就知道，今天该做什么</h2>
+    <p class="feat-desc">三栏工作台：待我处理 · 风险提醒 · 智能建议。一眼全局，不用翻页。</p>
+    <div class="dashboard-demo" id="dashDemo">
+      <div class="dash-cols">
+        <div class="dash-col">
+          <div class="dash-col-head">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="currentColor" stroke-width="1.5"/></svg>
+            待我处理
+          </div>
+          <div class="dp-row urgent"><span class="dp-dot red"></span><div class="dp-body"><strong>充电异常问题排查</strong><span class="dp-meta">逾期 2 天 · 高优</span></div><span class="dp-badge doing">进行中</span></div>
+          <div class="dp-row"><span class="dp-dot orange"></span><div class="dp-body"><strong>提交 Q18 测试报告</strong><span class="dp-meta">今天到期</span></div><span class="dp-badge">待办</span></div>
+          <div class="dp-row"><span class="dp-dot blue"></span><div class="dp-body"><strong>Review 电池需求文档</strong><span class="dp-meta">明天到期</span></div><span class="dp-badge">待办</span></div>
+        </div>
+        <div class="dash-col">
+          <div class="dash-col-head warn-head">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5"/></svg>
+            风险提醒
+          </div>
+          <div class="dp-row urgent"><span class="dp-dot red pulse"></span><div class="dp-body"><strong>3 张卡片无截止日期</strong><span class="dp-meta">建议立即设置</span></div><span class="dp-badge warn">风险</span></div>
+          <div class="dp-row urgent"><span class="dp-dot red pulse"></span><div class="dp-body"><strong>2 个高优卡片被阻塞</strong><span class="dp-meta">超过 3 天未推进</span></div><span class="dp-badge warn">风险</span></div>
+          <div class="dp-row"><span class="dp-dot orange"></span><div class="dp-body"><strong>本周 5 项即将到期</strong><span class="dp-meta">集中在周四、周五</span></div><span class="dp-badge">提醒</span></div>
+        </div>
+        <div class="dash-col">
+          <div class="dash-col-head suggest-head">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke="currentColor" stroke-width="1.5"/></svg>
+            智能建议
+          </div>
+          <div class="dp-row suggest"><span class="dp-dot green"></span><div class="dp-body"><strong>建议先处理「充电异常」</strong><span class="dp-meta">已逾期 + 高优先级</span></div><span class="dp-action">去处理 →</span></div>
+          <div class="dp-row suggest"><span class="dp-dot green"></span><div class="dp-body"><strong>今天可以完成 3 个待办</strong><span class="dp-meta">预计耗时 2 小时</span></div><span class="dp-action">查看 →</span></div>
+          <div class="dp-row suggest"><span class="dp-dot green"></span><div class="dp-body"><strong>上周完成 12 项任务</strong><span class="dp-meta">效率提升 20%</span></div><span class="dp-action">生成周报 →</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOARD -->
+<section class="feat" id="board">
+  <div class="feat-inner">
+    <div class="feat-label mono-label">Kanban</div>
+    <h2 class="feat-title">问题追踪，一目了然</h2>
+    <p class="feat-desc">卡片按状态流转，抽屉深度编辑，Ctrl+K 全局搜索。</p>
+    <div class="board-demo">
+      <div class="board-col">
+        <div class="board-col-head"><span class="bch-dot todo"></span>待处理<span class="bch-count">3</span></div>
+        <div class="board-card">
+          <div class="bc-priority high">高</div>
+          <p class="bc-title">充电异常排查</p>
+          <div class="bc-footer"><span class="bc-tag">硬件</span><span class="bc-due overdue">逾期 2 天</span></div>
+        </div>
+        <div class="board-card">
+          <div class="bc-priority mid">中</div>
+          <p class="bc-title">OTA 升级测试</p>
+          <div class="bc-footer"><span class="bc-tag">软件</span><span class="bc-due">明天到期</span></div>
+        </div>
+      </div>
+      <div class="board-col">
+        <div class="board-col-head"><span class="bch-dot doing"></span>进行中<span class="bch-count">2</span></div>
+        <div class="board-card active">
+          <div class="bc-priority high">高</div>
+          <p class="bc-title">电池寿命测试</p>
+          <div class="bc-footer"><span class="bc-tag">测试</span><span class="bc-due">3 天后</span></div>
+        </div>
+      </div>
+      <div class="board-col">
+        <div class="board-col-head"><span class="bch-dot resolved"></span>已解决<span class="bch-count">5</span></div>
+        <div class="board-card done">
+          <p class="bc-title">WiFi 断连复现</p>
+          <div class="bc-footer"><span class="bc-tag">网络</span><span class="bc-due">昨天完成</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI -->
+<section class="feat" id="ai">
+  <div class="feat-inner">
+    <div class="feat-label mono-label">AI Engine</div>
+    <h2 class="feat-title">说句话，事情就办了</h2>
+    <p class="feat-desc">自然语言输入，AI 自动创建待办、归档卡片、生成周报。</p>
+    <div class="ai-demo">
+      <div class="ai-input-area">
+        <div class="ai-input-box">
+          <span class="ai-cursor">|</span>
+          <span class="ai-typing" id="aiTyping"></span>
+        </div>
+        <div class="ai-hint">按 Enter 发送，AI 自动识别意图</div>
+      </div>
+      <div class="ai-result" id="aiResult"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDAR -->
+<section class="feat" id="calendar">
+  <div class="feat-inner">
+    <div class="feat-label mono-label">Calendar</div>
+    <h2 class="feat-title">时间维度，一目了然</h2>
+    <p class="feat-desc">月视图总览，周视图精确到小时。拖拽调整，点击创建。</p>
+    <div class="cal-dual">
+      <!-- 月视图 -->
+      <div class="cal-month">
+        <div class="cal-header">
+          <span class="cal-nav">‹</span>
+          <strong>2026 年 7 月</strong>
+          <span class="cal-nav">›</span>
+        </div>
+        <div class="cal-grid">
+          <div class="cal-dow"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+          <div class="cal-days">
+            <span class="other">30</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+            <span>7</span><span>8</span><span class="today">9<i class="cal-dot"></i></span><span class="has-event">10<i class="cal-dot accent"></i></span><span>11</span><span>12</span><span>13</span>
+            <span class="has-event">14<i class="cal-dot accent"></i></span><span>15</span><span>16</span><span class="has-event">17<i class="cal-dot accent"></i></span><span>18</span><span>19</span><span>20</span>
+            <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
+            <span>28</span><span>29</span><span>30</span><span>31</span><span class="other">1</span><span class="other">2</span><span class="other">3</span>
+          </div>
+        </div>
+      </div>
+      <!-- 周视图 -->
+      <div class="cal-week">
+        <div class="cal-header">
+          <span class="cal-nav">‹</span>
+          <strong>7 月 7 日 — 13 日</strong>
+          <span class="cal-nav">›</span>
+        </div>
+        <div class="cw-grid">
+          <div class="cw-header">
+            <span class="cw-time-head"></span>
+            <span class="cw-day"><b>7</b>周一</span>
+            <span class="cw-day"><b>8</b>周二</span>
+            <span class="cw-day today-col"><b>9</b>周三</span>
+            <span class="cw-day"><b>10</b>周四</span>
+            <span class="cw-day"><b>11</b>周五</span>
+          </div>
+          <div class="cw-body">
+            <div class="cw-row">
+              <span class="cw-time">09:00</span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"><div class="cw-event blue">晨会</div></span>
+              <span class="cw-cell"></span>
+            </div>
+            <div class="cw-row">
+              <span class="cw-time">10:00</span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"><div class="cw-event">Review 需求</div></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"><div class="cw-event">充电测试</div></span>
+            </div>
+            <div class="cw-row">
+              <span class="cw-time">11:00</span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"><div class="cw-event accent">AI 周报</div></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"></span>
+            </div>
+            <div class="cw-row">
+              <span class="cw-time">14:00</span>
+              <span class="cw-cell"><div class="cw-event">OTA 测试</div></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"><div class="cw-event red">产品评审</div></span>
+              <span class="cw-cell"></span>
+            </div>
+            <div class="cw-row">
+              <span class="cw-time">15:00</span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"><div class="cw-event blue">电池长测</div></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"></span>
+            </div>
+            <div class="cw-row">
+              <span class="cw-time">16:00</span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"><div class="cw-event">WiFi 排查</div></span>
+              <span class="cw-cell"></span>
+              <span class="cw-cell"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="feat">
+  <div class="feat-inner">
+    <div class="feat-label mono-label">Voice</div>
+    <h2 class="feat-title">按下快捷键，开口就记录</h2>
+    <p class="feat-desc">Alt+Space 唤起语音，说完自动转文字送入 AI。本地 SenseVoice，离线可用。</p>
+    <div class="voice-demo">
+      <div class="voice-ring" id="voiceRing">
+        <div class="voice-ring-inner"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z" stroke="currentColor" stroke-width="1.5"/><path d="M19 10v2a7 7 0 01-14 0v-2" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="19" x2="12" y2="23" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      </div>
+      <div class="voice-waves"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <p class="voice-text">"帮我建一个充电问题的卡片，优先级设为高"</p>
+      <div class="voice-tags">
+        <span class="vt">离线识别</span>
+        <span class="vt">自定义快捷键</span>
+        <span class="vt">ASR 预热加速</span>
+        <span class="vt">SenseVoice</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESKTOP -->
+<section class="feat" id="desktop">
+  <div class="feat-inner">
+    <div class="feat-label mono-label">Desktop</div>
+    <h2 class="feat-title">悬浮球，触手可及</h2>
+    <p class="feat-desc">屏幕边缘常驻，Hover 预览状态，点击展开快捷操作。</p>
+    <div class="orb-demo">
+      <div class="orb-scene">
+        <!-- Hover 面板 -->
+        <div class="orb-hover-panel">
+          <div class="ohp-header">今日概览</div>
+          <div class="ohp-stats">
+            <div class="ohp-stat"><span class="ohp-val">3</span><span class="ohp-lbl">待办</span></div>
+            <div class="ohp-stat warn"><span class="ohp-val">1</span><span class="ohp-lbl">逾期</span></div>
+            <div class="ohp-stat info"><span class="ohp-val">2</span><span class="ohp-lbl">进行中</span></div>
+          </div>
+          <div class="ohp-section">
+            <div class="ohp-sec-title">⏰ 即将到期</div>
+            <div class="ohp-item"><span class="ohp-item-text">提交 Q18 测试报告</span><span class="ohp-item-due">今天</span></div>
+            <div class="ohp-item"><span class="ohp-item-text">Review 电池需求文档</span><span class="ohp-item-due">明天</span></div>
+          </div>
+          <div class="ohp-section ohp-warn">
+            <div class="ohp-sec-title">⚠ 逾期</div>
+            <div class="ohp-item"><span class="ohp-item-text">充电异常问题排查</span><span class="ohp-item-due">逾期 2 天</span></div>
+          </div>
+          <div class="ohp-actions">
+            <button class="ohp-btn">🎤 语音</button>
+            <button class="ohp-btn">📋 面板</button>
+            <button class="ohp-btn">✅ 待办</button>
+          </div>
+        </div>
+        <!-- 悬浮球本体 -->
+        <div class="orb-ball">
+          <div class="orb-core">
+            <div class="orb-bar"></div>
+            <div class="orb-bar"></div>
+          </div>
+          <div class="orb-glow"></div>
+          <div class="orb-badge-todo">3</div>
+          <div class="orb-badge-overdue">1</div>
+        </div>
+      </div>
+      <div class="orb-features">
+        <div class="orb-feat"><span class="of-num">01</span><div><strong>智能问候</strong><p>根据时段和任务量个性化生成</p></div></div>
+        <div class="orb-feat"><span class="of-num">02</span><div><strong>到期提醒</strong><p>贪睡 3 次后触发全屏强提醒</p></div></div>
+        <div class="orb-feat"><span class="of-num">03</span><div><strong>快捷面板</strong><p>语音 / 新建待办 / 新建卡片 / 跳转</p></div></div>
+        <div class="orb-feat"><span class="of-num">04</span><div><strong>自动更新</strong><p>静默下载 + SHA256 校验</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REPORTS -->
+<section class="feat">
+  <div class="feat-inner">
+    <div class="feat-label mono-label">Reports</div>
+    <h2 class="feat-title">AI 周报，一键生成</h2>
+    <p class="feat-desc">自动汇总本周工作，直接输出可用的周报文档。</p>
+    <div class="report-demo">
+      <div class="report-card">
+        <div class="rpt-head">
+          <span class="rpt-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="1.5"/><polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="1.5"/></svg></span>
+          <strong>第 28 周工作周报</strong>
+          <span class="rpt-date">2026.07.07 — 07.11</span>
+        </div>
+        <div class="rpt-body">
+          <div class="rpt-section">
+            <span class="rpt-label">本周完成</span>
+            <p>充电模块异常排查，根因定位为 IC 供电不稳；OTA 升级测试全量通过</p>
+          </div>
+          <div class="rpt-section">
+            <span class="rpt-label">进行中</span>
+            <p>电池寿命长测进入第 5 轮循环，预计下周出结果</p>
+          </div>
+          <div class="rpt-section">
+            <span class="rpt-label">风险项</span>
+            <p>WiFi 断连问题在 O17 机型复现率上升至 15%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THEME + PRIVACY -->
+<section class="feat">
+  <div class="feat-inner feat-center">
+    <div class="feat-label mono-label">Experience</div>
+    <h2 class="feat-title">暗色主题 · 本地优先</h2>
+    <p class="feat-desc">深色模式覆盖每个像素。数据本地存储，语音离线运行。</p>
+    <div class="xp-themes">
+      <div class="xp-card">
+        <div class="theme-card light-card">
+          <div class="tc-bar"><span class="tc-dot r"></span><span class="tc-dot y"></span><span class="tc-dot g"></span></div>
+          <div class="tc-body"><div class="tc-row"></div><div class="tc-row short"></div></div>
+        </div>
+        <span class="xp-label">浅色模式</span>
+      </div>
+      <div class="xp-card">
+        <div class="theme-card dark-card">
+          <div class="tc-bar"><span class="tc-dot r"></span><span class="tc-dot y"></span><span class="tc-dot g"></span></div>
+          <div class="tc-body"><div class="tc-row"></div><div class="tc-row short"></div></div>
+        </div>
+        <span class="xp-label">深色模式</span>
+      </div>
+    </div>
+    <div class="xp-badges">
+      <div class="xp-badge"><span class="xp-icon">🔒</span><span>本地 SQLite</span></div>
+      <div class="xp-badge"><span class="xp-icon">🎤</span><span>离线语音</span></div>
+      <div class="xp-badge"><span class="xp-icon">🖥️</span><span>桌面原生</span></div>
+      <div class="xp-badge"><span class="xp-icon">🔄</span><span>后台常驻</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="footer-cta">
+  <div class="narrow">
+    <h2>小助手</h2>
+    <p>AI 原生工作台，让工作自然流动</p>
+    <a href="#workspace" class="btn-pill">开始使用</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>小助手 v0.2.1 · 2026</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
